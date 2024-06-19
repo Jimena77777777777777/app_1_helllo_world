@@ -1,44 +1,52 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
- void main(List<String> args){
+
+void main(List<String> args) {
   runApp(
-    
-  MaterialApp( home: Scaffold( backgroundColor: Color.fromRGBO(216, 164, 8, 0.059),
-  body: Center(child: Text("Hola a todes",
-    style: TextStyle(
-      color:Colors.amber,
-      fontSize: 30.0,
+    MaterialApp(
+      home: Scaffold(
+        //backgroundColor: Colors.deepPurple,
+        backgroundColor: Color.fromARGB(255, 225, 172, 196),
+        body: SafeArea(
+          child: Column(
+            children: [
+              Container(
+                color: Colors.yellow,
+                child: Text("Hola 1"),
+                height: 100.0,
+                width: 100.0,
+                margin: EdgeInsets.all(10.0),
+                padding: EdgeInsets.all(30.0),
+                alignment: Alignment.topRight,
+              ),
+              Container(
+                color: Colors.blue,
+                child: Text("Hola 1"),
+                height: 100.0,
+                width: 300.0,
+                margin: EdgeInsets.all(10.0),
+                padding: EdgeInsets.all(30.0),
+                alignment: Alignment.topRight,
+              ),
+              Container(
+                color: Colors.redAccent,
+                child: Text("Hola 3"),
+                height: 100.0,
+                width: 100.0,
+                margin: EdgeInsets.all(10.0),
+                padding: EdgeInsets.all(30.0),
+                alignment: Alignment.topRight,
+              ),
+              Text("Otro elemento"),
+            ],
 
-      body:SafeArea(
-        child: Container(
-          color: Colors.amberAccent,
-          child: Text("hola"),
-          height: 200.0,
-          width: 200.0,
-          
-          margin: EdgeInsets.symmetric(vertical: 8.0, horizontal: 40.0),
-          padding: EdgeInsets.all(30.0), 
-          alignment: Alignment.topRight,
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            
+
+          ),
         ),
-
       ),
     ),
-  ),
-  )  ,
-
-   ),
-   ),
   );
- }
-
-
-
-
-
- /*
- scaffold: puede modificarse hoja en la blanco home:Scaffold(),
-
- widget: pagina en negro
- 
- */
+}
